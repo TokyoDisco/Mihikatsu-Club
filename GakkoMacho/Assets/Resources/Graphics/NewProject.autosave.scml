@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spriter_data scml_version="1.0" generator="BrashMonkey Spriter" generator_version="r10" pixel_mode="1">
+    <folder id="0" name="Characters">
+        <file id="0" name="Characters/BasketElemental.png" width="332" height="390" pivot_x="0" pivot_y="1"/>
+        <file id="1" name="Characters/chibiLeftWalk5.png" width="354" height="666" pivot_x="0" pivot_y="1"/>
+        <file id="2" name="Characters/chibiLeftWalk1.png" width="354" height="660" pivot_x="0" pivot_y="1"/>
+        <file id="3" name="Characters/chibiLeftWalk2.png" width="354" height="676" pivot_x="0" pivot_y="1"/>
+        <file id="4" name="Characters/chibiLeftWalk3.png" width="354" height="676" pivot_x="0" pivot_y="1"/>
+        <file id="5" name="Characters/chibiLeftWalk4.png" width="354" height="673" pivot_x="0" pivot_y="1"/>
+        <file id="6" name="Characters/chibiFrontWalk1.png" width="352" height="696" pivot_x="0" pivot_y="1"/>
+    </folder>
+    <entity id="0" name="entity_000">
+        <animation id="0" name="NewAnimation" length="1000" interval="100">
+            <mainline>
+                <key id="0">
+                    <object_ref id="0" timeline="0" key="0" z_index="0"/>
+                </key>
+                <key id="1" time="212">
+                    <object_ref id="0" timeline="0" key="1" z_index="0"/>
+                </key>
+                <key id="2" time="301">
+                    <object_ref id="0" timeline="0" key="2" z_index="0"/>
+                </key>
+            </mainline>
+            <timeline id="0" name="chibiFrontWalk1">
+                <key id="0" spin="0">
+                    <object folder="0" file="6" x="-224" y="368"/>
+                </key>
+                <key id="1" time="212" spin="0">
+                    <object folder="0" file="6" x="-224" y="368"/>
+                </key>
+                <key id="2" time="301" spin="0">
+                    <object folder="0" file="6" x="-224" y="368"/>
+                </key>
+            </timeline>
+        </animation>
+    </entity>
+</spriter_data>
