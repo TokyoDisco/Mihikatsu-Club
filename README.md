@@ -1,6 +1,7 @@
 # MihikatsuClub
 Master Branch has finished 0.6 version
 WIP Branch is 0.7 version
+
 Final Year project. 2D RPG game with turn-based final fantasy style insprited. Procedural Dungeon Generation
 Features : 
 - Exploration and Turn-based Battles mode
