@@ -1,16 +1,17 @@
 # MihikatsuClub
 Master Branch has finished 0.6 version
-WIP Branch is 0.7 version
+WIP Branch is 0.8 version
 
 Final Year project. 2D RPG game with turn-based final fantasy style insprited. Procedural Dungeon Generation
 Features : 
 - Exploration and Turn-based Battles mode
+- Plot mode or walking-simulation mode (NYI)
 - Element-based combat and progression (water, fire, earth, wind)
 - Rock - paper - scicors system ( water beats fire etc.)
--  Assemble your party of characters up to 3 in team
-- Talent trees
+- Supporting up to 6 controable heroes
+- Talent trees (no longer in version 0.8)
 - Multiply of diffrent skills to use in combat
-- Trinket system
+- Trinket system (disabled in version 0.7 and 0.8)
 - Comsuable items like healing potion etc.
 - Diffrent attack Behaviours of enemies
 - Boss battles with unique attacks patterns 
@@ -24,4 +25,4 @@ Features :
 - Easy to add skills/items/trinkets code
 - Diffrent background art for battles in diffrent levels
 - Simple Cutscenes/dialogues system
-- Experimental Procedural generation of use-in-battles items
+- Experimental Procedural generation of use-in-battles items 
