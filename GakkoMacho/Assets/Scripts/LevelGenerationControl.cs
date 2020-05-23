@@ -327,8 +327,8 @@ public class LevelGenerationControl : MonoBehaviour {
 
                 if (RoomList[i].type == 1)
                 {
-                    enemy = (GameObject)Instantiate(GameObject.Find("Spawn" + i), RoomListSpawn[i].transform.FindChild("Spawn" + i).transform, false);
-                    enemy.GetComponent<Transform>().position = RoomListSpawn[i].transform.FindChild("Spawn" + i).GetComponent<Transform>().position;
+                    enemy = (GameObject)Instantiate(GameObject.Find("Spawn" + i), RoomListSpawn[i].transform.Find("Spawn" + i).transform, false);
+                    enemy.GetComponent<Transform>().position = RoomListSpawn[i].transform.Find("Spawn" + i).GetComponent<Transform>().position;
                     if (!enemy.GetComponent<SpriteRenderer>())
                     {
                         enemy.AddComponent<SpriteRenderer>();
@@ -347,13 +347,13 @@ public class LevelGenerationControl : MonoBehaviour {
                 {
                     if (RoomList[i].type == 2)
                     {
-                        chest = (GameObject)Instantiate(GameObject.Find("Spawn" + i), RoomListSpawn[i].transform.FindChild("Spawn" + i).transform, true);
-                        chest.GetComponent<Transform>().position = RoomListSpawn[i].transform.FindChild("Spawn" + i).GetComponent<Transform>().position;
+                        chest = (GameObject)Instantiate(GameObject.Find("Spawn" + i), RoomListSpawn[i].transform.Find("Spawn" + i).transform, true);
+                        chest.GetComponent<Transform>().position = RoomListSpawn[i].transform.Find("Spawn" + i).GetComponent<Transform>().position;
                         chest.tag = "ItemPickUp";
                         chest.name = "itemDrop" + i;
 
                         chest.GetComponent<SpriteRenderer>().sprite = GameObject.Find("ItemRandomSpawn").GetComponent<SpriteRenderer>().sprite;
-                        RoomListSpawn[i].transform.FindChild("Spawn" + i).GetComponent<SpriteRenderer>().sprite = GameObject.Find("ItemRandomSpawn").GetComponent<SpriteRenderer>().sprite;
+                        RoomListSpawn[i].transform.Find("Spawn" + i).GetComponent<SpriteRenderer>().sprite = GameObject.Find("ItemRandomSpawn").GetComponent<SpriteRenderer>().sprite;
                         chest.AddComponent<ItemPickUp>();
                         chest.GetComponent<ItemPickUp>().me = chest;
                         chest.GetComponent<BoxCollider2D>().isTrigger = true;
@@ -369,13 +369,13 @@ public class LevelGenerationControl : MonoBehaviour {
                         {
                             if(RoomList[i].type ==4)
                             {
-                                chest = (GameObject)Instantiate(GameObject.Find("Spawn" + i), RoomListSpawn[i].transform.FindChild("Spawn" + i).transform, true);
-                                chest.GetComponent<Transform>().position = RoomListSpawn[i].transform.FindChild("Spawn" + i).GetComponent<Transform>().position;
+                                chest = (GameObject)Instantiate(GameObject.Find("Spawn" + i), RoomListSpawn[i].transform.Find("Spawn" + i).transform, true);
+                                chest.GetComponent<Transform>().position = RoomListSpawn[i].transform.Find("Spawn" + i).GetComponent<Transform>().position;
                                 chest.tag = "RandomTrinket";
                                 chest.name = "TrinketDrop" + i;
 
                                 chest.GetComponent<SpriteRenderer>().sprite = GameObject.Find("RandomTrinketDrop").GetComponent<SpriteRenderer>().sprite;
-                                RoomListSpawn[i].transform.FindChild("Spawn" + i).GetComponent<SpriteRenderer>().sprite = chest.GetComponent<SpriteRenderer>().sprite;
+                                RoomListSpawn[i].transform.Find("Spawn" + i).GetComponent<SpriteRenderer>().sprite = chest.GetComponent<SpriteRenderer>().sprite;
                                 chest.AddComponent<ItemPickUp>();
                                 chest.GetComponent<ItemPickUp>().me = chest;
                                 chest.GetComponent<BoxCollider2D>().isTrigger = true;
@@ -384,9 +384,9 @@ public class LevelGenerationControl : MonoBehaviour {
                     }
                 }
 
-                if (GameObject.Find("RoomPackage").transform.FindChild("roomSpawn" + i) == true)
+                if (GameObject.Find("RoomPackage").transform.Find("roomSpawn" + i) == true)
                 {
-                    Destroy(GameObject.Find("RoomPackage").transform.FindChild("roomSpawn" + i));
+                    Destroy(GameObject.Find("RoomPackage").transform.Find("roomSpawn" + i));
                 }
 
                 List<GameObject> ProceduralGeneratedRoomsList = new List<GameObject>();
@@ -758,8 +758,8 @@ public class LevelGenerationControl : MonoBehaviour {
 
                 if (RoomList[i].type == 1)
                 {
-                    enemy = (GameObject)Instantiate(GameObject.Find("Spawn" + i), RoomListSpawn[i].transform.FindChild("Spawn" + i).transform, false);
-                    enemy.GetComponent<Transform>().position = RoomListSpawn[i].transform.FindChild("Spawn" + i).GetComponent<Transform>().position;
+                    enemy = (GameObject)Instantiate(GameObject.Find("Spawn" + i), RoomListSpawn[i].transform.Find("Spawn" + i).transform, false);
+                    enemy.GetComponent<Transform>().position = RoomListSpawn[i].transform.Find("Spawn" + i).GetComponent<Transform>().position;
                     if (!enemy.GetComponent<SpriteRenderer>())
                     {
                         enemy.AddComponent<SpriteRenderer>();
@@ -779,8 +779,8 @@ public class LevelGenerationControl : MonoBehaviour {
                 {
                     if (RoomList[i].type == 2)
                     {
-                        chest = (GameObject)Instantiate(GameObject.Find("Spawn" + i), RoomListSpawn[i].transform.FindChild("Spawn" + i).transform, true);
-                        chest.GetComponent<Transform>().position = RoomListSpawn[i].transform.FindChild("Spawn" + i).GetComponent<Transform>().position;
+                        chest = (GameObject)Instantiate(GameObject.Find("Spawn" + i), RoomListSpawn[i].transform.Find("Spawn" + i).transform, true);
+                        chest.GetComponent<Transform>().position = RoomListSpawn[i].transform.Find("Spawn" + i).GetComponent<Transform>().position;
                         chest.tag = "ItemPickUp";
                         chest.name = "itemDrop" + i;
                         chest.GetComponent<BoxCollider2D>().enabled = true;
@@ -788,7 +788,7 @@ public class LevelGenerationControl : MonoBehaviour {
                         chest.AddComponent<ItemPickUp>();
                         chest.GetComponent<ItemPickUp>().me = chest;
                         chest.GetComponent<SpriteRenderer>().sprite = GameObject.Find("ItemRandomSpawn").GetComponent<SpriteRenderer>().sprite;
-                        RoomListSpawn[i].transform.FindChild("Spawn" + i).GetComponent<SpriteRenderer>().sprite = GameObject.Find("ItemRandomSpawn").GetComponent<SpriteRenderer>().sprite;
+                        RoomListSpawn[i].transform.Find("Spawn" + i).GetComponent<SpriteRenderer>().sprite = GameObject.Find("ItemRandomSpawn").GetComponent<SpriteRenderer>().sprite;
                         //RoomListSpawn[i].transform.FindChild("SpawnLocation").GetComponent<BoxCollider>().enabled = false;
 
                     }
@@ -802,13 +802,13 @@ public class LevelGenerationControl : MonoBehaviour {
                         {
                             if (RoomList[i].type == 4)
                             {
-                                chest = (GameObject)Instantiate(GameObject.Find("Spawn" + i), RoomListSpawn[i].transform.FindChild("Spawn" + i).transform, true);
-                                chest.GetComponent<Transform>().position = RoomListSpawn[i].transform.FindChild("Spawn" + i).GetComponent<Transform>().position;
+                                chest = (GameObject)Instantiate(GameObject.Find("Spawn" + i), RoomListSpawn[i].transform.Find("Spawn" + i).transform, true);
+                                chest.GetComponent<Transform>().position = RoomListSpawn[i].transform.Find("Spawn" + i).GetComponent<Transform>().position;
                                 chest.tag = "RandomTrinket";
                                 chest.name = "TrinketDrop" + i;
 
                                 chest.GetComponent<SpriteRenderer>().sprite = GameObject.Find("RandomTrinketDrop").GetComponent<SpriteRenderer>().sprite;
-                                RoomListSpawn[i].transform.FindChild("Spawn" + i).GetComponent<SpriteRenderer>().sprite = chest.GetComponent<SpriteRenderer>().sprite;
+                                RoomListSpawn[i].transform.Find("Spawn" + i).GetComponent<SpriteRenderer>().sprite = chest.GetComponent<SpriteRenderer>().sprite;
                                 chest.AddComponent<ItemPickUp>();
                                 chest.GetComponent<ItemPickUp>().me = chest;
                                 chest.GetComponent<BoxCollider2D>().isTrigger = true;
@@ -817,9 +817,9 @@ public class LevelGenerationControl : MonoBehaviour {
                     }
                 }
 
-                if (GameObject.Find("RoomPackage").transform.FindChild("roomSpawn" + i) == true)
+                if (GameObject.Find("RoomPackage").transform.Find("roomSpawn" + i) == true)
                 {
-                    Destroy(GameObject.Find("RoomPackage").transform.FindChild("roomSpawn" + i));
+                    Destroy(GameObject.Find("RoomPackage").transform.Find("roomSpawn" + i));
                 }
 
                 //   foreach (GameObject child in RoomListSpawn[i].transform) if (child.CompareTag("Walls"))

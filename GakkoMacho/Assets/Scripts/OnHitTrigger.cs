@@ -13,8 +13,8 @@ public class OnHitTrigger : MonoBehaviour
         {
             GameObject.Find("StatsCarrier").GetComponent<PlayerStats>().CameraSave(GameObject.Find("Main Camera").GetComponent<Transform>().position);
             DontDestroyOnLoad(GameObject.Find("StatsCarrier"));
-            DontDestroyOnLoad(GameObject.Find("Generator"));
-            DontDestroyOnLoad(GameObject.Find("RoomPackage"));
+        //    DontDestroyOnLoad(GameObject.Find("Generator"));
+        //    DontDestroyOnLoad(GameObject.Find("RoomPackage"));
             GameObject.Find("Player").GetComponent<BasicContolScript>().Scena = 1;
             Scene activ = SceneManager.GetActiveScene();
 
